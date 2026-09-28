@@ -197,6 +197,24 @@ footer img{height:26px;width:auto;margin-bottom:14px}
 footer a{color:var(--dim);text-decoration:none}
 footer a:hover{color:var(--red-text)}
 
+/* Triângulos decorativos */
+.problem,.cases,.steps,.cta-box{position:relative;overflow:hidden;isolation:isolate}
+.tri{position:absolute;z-index:-1;height:auto;pointer-events:none;will-change:transform;transform:translate3d(0,var(--py,0px),0) rotate(var(--rot,0deg))}
+.tri path{fill:none;stroke:var(--red);stroke-width:1.4;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s var(--ease)}
+.tri.in path{stroke-dashoffset:0}
+.tri-problem{width:min(34vw,460px);right:-6%;top:12%;--rot:-8deg;opacity:.55}
+.tri-cases{width:min(24vw,320px);right:-7%;top:3%;--rot:196deg;opacity:.4}
+.tri-steps{width:min(22vw,300px);left:14%;bottom:-10%;--rot:14deg;opacity:.4}
+.tri-cta{width:min(30vw,380px);right:-4%;top:-18%;--rot:-18deg;opacity:.5}
+.tri-cta2{width:min(18vw,220px);left:-5%;bottom:-22%;--rot:160deg;opacity:.35}
+@media (max-width:960px){
+  .tri-problem{width:62vw;right:-24%;top:auto;bottom:-4%}
+  .tri-cases{width:44vw;right:-22%}
+  .tri-steps{width:44vw;left:auto;right:-18%;bottom:-6%}
+  .tri-cta{width:60vw;right:-26%}
+  .tri-cta2{display:none}
+}
+
 /* RESPONSIVE */
 @media (max-width: 960px){
   .nav-links{position:fixed;inset:calc(76px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;align-items:stretch;gap:0;padding:12px var(--pad) 24px;background:var(--bg);border-bottom:1px solid #242424;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .3s var(--ease),visibility 0s .3s}
@@ -227,6 +245,8 @@ footer a:hover{color:var(--red-text)}
   .js .hero .eyebrow,.js .hero .lead,.js .hero-ctas,.js .reel{opacity:1;transform:none}
   .js .hero h1 .line span{transform:none}
   .reel-tri path{stroke-dashoffset:0}
+  .tri path{stroke-dashoffset:0}
+  .tri{transform:rotate(var(--rot,0deg))}
 }
 </style>
 </head>
@@ -276,6 +296,7 @@ footer a:hover{color:var(--red-text)}
   </section>
 
   <section class="problem">
+    <svg class="tri tri-problem" viewBox="0 0 360 400" aria-hidden="true"><path pathLength="1" d="M30 20 Q10 10 10 34 L10 366 Q10 390 30 380 L340 214 Q356 200 340 186 Z"/></svg>
     <div class="wrap">
       <div>
         <span class="eyebrow">O problema</span>
@@ -315,6 +336,7 @@ footer a:hover{color:var(--red-text)}
   </section>
 
   <section class="cases" id="antes-depois">
+    <svg class="tri tri-cases" viewBox="0 0 360 400" aria-hidden="true"><path pathLength="1" d="M30 20 Q10 10 10 34 L10 366 Q10 390 30 380 L340 214 Q356 200 340 186 Z"/></svg>
     <div class="wrap">
       <span class="eyebrow">Antes e depois</span>
       <h2 class="h2">O mesmo negócio, outra primeira impressão.</h2>
@@ -379,6 +401,7 @@ footer a:hover{color:var(--red-text)}
   </section>
 
   <section class="steps" id="como">
+    <svg class="tri tri-steps" viewBox="0 0 360 400" aria-hidden="true"><path pathLength="1" d="M30 20 Q10 10 10 34 L10 366 Q10 390 30 380 L340 214 Q356 200 340 186 Z"/></svg>
     <div class="wrap">
       <div>
         <span class="eyebrow">Como funciona</span>
@@ -420,6 +443,8 @@ footer a:hover{color:var(--red-text)}
   <section class="cta" id="contato">
     <div class="wrap">
       <div class="cta-box">
+    <svg class="tri tri-cta" viewBox="0 0 360 400" aria-hidden="true"><path pathLength="1" d="M30 20 Q10 10 10 34 L10 366 Q10 390 30 380 L340 214 Q356 200 340 186 Z"/></svg>
+        <svg class="tri tri-cta2" viewBox="0 0 360 400" aria-hidden="true"><path pathLength="1" d="M30 20 Q10 10 10 34 L10 366 Q10 390 30 380 L340 214 Q356 200 340 186 Z"/></svg>
         <img src="assets/logo.svg" alt="iMarcas" width="1177" height="302">
         <h2>Vamos montar o seu?</h2>
         <span class="bar"></span>
@@ -490,6 +515,31 @@ footer a:hover{color:var(--red-text)}
       io.observe(el);
     }
   });
+
+  // Triângulos: desenham ao entrar na tela e flutuam com a rolagem
+  var tris = document.querySelectorAll('.tri');
+  if (reduce || !('IntersectionObserver' in window)) {
+    tris.forEach(function(t){ t.classList.add('in'); });
+  } else {
+    var io3 = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io3.unobserve(en.target); } });
+    }, { threshold: .25 });
+    tris.forEach(function(t){ io3.observe(t); });
+    var ticking = false;
+    function parallax(){
+      var vh = window.innerHeight;
+      tris.forEach(function(t, i){
+        var r = t.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        var prog = (r.top + r.height / 2 - vh / 2) / vh;
+        var speed = i % 2 ? 60 : -80;
+        t.style.setProperty('--py', (prog * speed).toFixed(1) + 'px');
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(parallax); } }, { passive: true });
+    parallax();
+  }
 
   // Contagem regressiva do "5s"
   var sec = document.querySelector('[data-count]');
