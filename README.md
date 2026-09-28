@@ -11,6 +11,5 @@ Publicado em https://mkticasas.github.io/imarcas/ (repositório mkticasas/imarca
 4. Domínio próprio: em Settings → Pages → Custom domain, e um registro CNAME no seu DNS.
 
 ## Pendências no index.html
-- `[DEFINIR: prazo mínimo de contrato]` no FAQ
 - Showreel: substitua o botão de play por `<video src="assets/showreel.mp4" autoplay muted loop playsinline>`
 - Foto "Quem faz": instrução em comentário no HTML
