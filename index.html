@@ -541,19 +541,20 @@ footer a:hover{color:var(--red-text)}
     parallax();
   }
 
-  // Contagem regressiva do "5s"
+  // Contagem de 0 a 5 do "5s"
   var sec = document.querySelector('[data-count]');
   if (sec && !reduce && 'IntersectionObserver' in window) {
+    sec.textContent = '0s';
     var done = false;
     var io2 = new IntersectionObserver(function(entries){
       if (!entries[0].isIntersecting || done) return;
       done = true; io2.disconnect();
-      var n = 5;
+      var n = 0;
       sec.textContent = n + 's';
       var timer = setInterval(function(){
-        n--;
-        if (n < 0) { clearInterval(timer); sec.textContent = '5s'; return; }
+        n++;
         sec.textContent = n + 's';
+        if (n >= 5) clearInterval(timer);
       }, 450);
     }, { threshold: .6 });
     io2.observe(sec);
