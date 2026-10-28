@@ -12,4 +12,4 @@ Publicado em https://mkticasas.github.io/imarcas/ (repositório mkticasas/imarca
 
 ## Pendências no index.html
 - Showreel: substitua o botão de play por `<video src="assets/showreel.mp4" autoplay muted loop playsinline>`
-- Foto "Quem faz": instrução em comentário no HTML
+- Foto "Quem faz": assets/lucas.jpg (troque o arquivo para atualizar)
