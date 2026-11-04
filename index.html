@@ -7,7 +7,7 @@
 <meta name="description" content="Organizamos o perfil do seu negócio no Instagram e mantemos ele vivo. Foto profissional, vídeo de apresentação e conteúdo constante em São José do Rio Preto e região.">
 <meta property="og:title" content="iMarcas | Marcas reais para negócios locais">
 <meta property="og:description" content="Seu cliente procura você no Instagram antes de te ligar. A gente organiza o seu perfil e mantém ele vivo.">
-<meta name="theme-color" content="#0E0D0D">
+<meta name="theme-color" content="#080808">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -15,13 +15,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Layout: história contada em cenas com a rolagem (conceito do estudo Hyundai). Cena principal: o celular do Lugner
-   gira de "antes" para "depois" e acende em vermelho. Logo se desenha na abertura e no fechamento. Visual escuro único. */
+/* Layout: obsidiana, prata cromada e vermelho laser, com a tipografia da marca; o herói divide texto e um
+   triângulo de play em vidro preto com núcleo vermelho, dentro de um disco com aro de luz. Visual escuro único, por escolha. */
 :root{
-  --bg:#0E0D0D; --bg-2:#141212; --card:#1A1717; --card-2:#201C1C;
-  --line:rgba(255,240,240,.08); --line-strong:rgba(255,240,240,.14);
-  --text:#F4F1F1; --muted:#A8A0A0; --dim:#7D7474; --faint:#564E4E;
-  --red:#C52F43; --red-text:#E3586C; --coral:#F2867A; --teal:#3BBFAD; --teal-soft:rgba(59,191,173,.12); --teal-line:rgba(59,191,173,.38); --red-soft:rgba(197,47,67,.12); --red-line:rgba(197,47,67,.38);
+  --bg:#080808; --bg-2:#0D0D0D; --card:#0F0F0F; --card-2:#151515;
+  --line:rgba(205,203,202,.09); --line-strong:rgba(205,203,202,.18);
+  --text:#EDEBEA; --muted:#9C9A99; --dim:#6E6C6B; --faint:#4A4848;
+  --red:#D41514; --red-text:#F2392F; --silver:#CDCBCA; --silver-line:rgba(205,203,202,.28); --red-soft:rgba(212,21,20,.12); --red-line:rgba(212,21,20,.45);
   --display:'Bricolage Grotesque','Arial Black',sans-serif;
   --serif:'Fraunces',Georgia,serif;
   --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
@@ -32,7 +32,7 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{background:#060606}
-body{margin:0;background:linear-gradient(180deg,#1C1C1F 0%,#141416 35%,#0B0B0C 75%,#060606 100%);color:var(--text);font-family:var(--body);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:linear-gradient(180deg,#141414 0%,#0E0E0E 30%,#090909 70%,#060606 100%);color:var(--text);font-family:var(--body);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
 img{max-width:100%;display:block}
 a{color:var(--red-text)}
@@ -52,7 +52,7 @@ section{border-top:1px solid var(--line)}
 /* Botões */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s var(--ease),box-shadow .2s,background .2s,border-color .2s,color .2s}
 .btn-red{background:var(--red);color:#fff}
-.btn-red:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(197,47,67,.38);color:#fff}
+.btn-red:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(212,21,20,.38);color:#fff}
 .btn-ghost{border:1px solid var(--line-strong);color:var(--text)}
 .btn-ghost:hover{border-color:var(--red-line);background:var(--red-soft)}
 .btn svg{transition:transform .2s var(--ease)}
@@ -64,9 +64,9 @@ section{border-top:1px solid var(--line)}
 .lg .lg-tri{fill:var(--red)}
 
 /* Progresso + header */
-#progresso{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:2px;z-index:55;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--red),var(--teal))}
+#progresso{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);height:2px;z-index:55;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--red),var(--silver))}
 .nav{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-.nav.solida{background:rgba(14,13,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav.solida{background:rgba(8,8,8,.84);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
 .nav .wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .nav-logo{display:block;transition:opacity .4s,transform .4s var(--ease)}
 @media (min-width:961px){.nav:not(.solida) .nav-logo{opacity:0;transform:translateY(-6px);pointer-events:none}}
@@ -102,7 +102,7 @@ section{border-top:1px solid var(--line)}
 .reel-tri path{stroke:var(--red);stroke-width:1.5;fill:none}
 .reel small{position:relative;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 .reel p{position:relative;color:#D6CFCF;font-size:14px;max-width:26ch}
-.play{position:relative;align-self:center;width:84px;height:84px;border-radius:50%;background:var(--red);border:0;display:grid;place-items:center;cursor:pointer;transition:transform .3s var(--ease);box-shadow:0 0 50px rgba(197,47,67,.45)}
+.play{position:relative;align-self:center;width:84px;height:84px;border-radius:50%;background:var(--red);border:0;display:grid;place-items:center;cursor:pointer;transition:transform .3s var(--ease);box-shadow:0 0 50px rgba(212,21,20,.45)}
 .play::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--red);animation:pulse 2.4s var(--ease) 1.5s infinite;opacity:0}
 .play:hover{transform:scale(1.06)}
 @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
@@ -119,9 +119,9 @@ section{border-top:1px solid var(--line)}
 .seconds span{font-size:15px;color:#D6CFCF;max-width:17ch;padding-bottom:8px}
 .flist{display:flex;flex-direction:column;gap:30px}
 .fitem{border-left:2px solid var(--line-strong);padding-left:24px}
-.fitem.check{border-left-color:var(--teal)}
+.fitem.check{border-left-color:var(--silver)}
 .fitem .tag{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:8px}
-.fitem.check .tag{color:var(--teal)}
+.fitem.check .tag{color:var(--silver)}
 .fitem h3{font-family:var(--body);font-size:17px;font-weight:600;letter-spacing:0;margin-bottom:6px}
 .fitem p{color:var(--muted);font-size:15px}
 
@@ -146,7 +146,7 @@ section{border-top:1px solid var(--line)}
 .grid-services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .tile{padding:30px;border-radius:18px;background:var(--card);border:1px solid var(--line);transition:border-color .25s}
 .tile:hover{border-color:var(--red-line)}
-.tile .mono{font-family:var(--mono);font-size:11.5px;color:var(--teal);display:block;margin-bottom:22px}
+.tile .mono{font-family:var(--mono);font-size:11.5px;color:var(--silver);display:block;margin-bottom:22px}
 .tile h3{font-weight:700;font-size:clamp(19px,1.7vw,23px);margin-bottom:8px}
 .tile p{color:var(--muted);font-size:14.5px}
 .tile-feature{grid-row:span 2;background:var(--red);border-color:var(--red);color:#fff;display:flex;flex-direction:column;justify-content:space-between;min-height:400px;padding:38px}
@@ -166,10 +166,10 @@ section{border-top:1px solid var(--line)}
 .compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .compare .after{clip-path:inset(0 0 0 var(--pos,50%))}
 .compare .divider{position:absolute;top:3%;bottom:3%;left:var(--pos,50%);width:2px;background:var(--red);transform:translateX(-1px);pointer-events:none}
-.compare .knob{position:absolute;top:50%;left:var(--pos,50%);width:46px;height:46px;border-radius:50%;background:var(--red);transform:translate(-50%,-50%);display:grid;place-items:center;pointer-events:none;box-shadow:0 0 0 6px rgba(197,47,67,.22)}
+.compare .knob{position:absolute;top:50%;left:var(--pos,50%);width:46px;height:46px;border-radius:50%;background:var(--red);transform:translate(-50%,-50%);display:grid;place-items:center;pointer-events:none;box-shadow:0 0 0 6px rgba(212,21,20,.22)}
 .compare .tg{position:absolute;top:-30px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
 .compare .tg-b{left:0;color:var(--dim)}
-.compare .tg-a{right:0;color:var(--teal)}
+.compare .tg-a{right:0;color:var(--silver)}
 .compare input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
 .compare input:focus-visible ~ .knob{outline:3px solid #fff;outline-offset:3px}
 
@@ -183,7 +183,7 @@ section{border-top:1px solid var(--line)}
 .combo li{display:flex;gap:12px;align-items:flex-start}
 .combo li::before{content:"";flex-shrink:0;margin-top:7px;border-left:8px solid var(--red);border-top:5px solid transparent;border-bottom:5px solid transparent}
 .combo .btn{margin-top:auto}
-.combo-gold{border-color:var(--red-line);background:linear-gradient(180deg,rgba(197,47,67,.16),var(--card) 62%)}
+.combo-gold{border-color:var(--red-line);background:linear-gradient(180deg,rgba(212,21,20,.16),var(--card) 62%)}
 .combo-gold .combo-name{color:var(--red-text)}
 .combo-gold .badge{align-self:flex-start;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--red);padding:4px 10px;border-radius:999px;margin-bottom:-6px}
 
@@ -206,12 +206,12 @@ section{border-top:1px solid var(--line)}
 .founder::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,13,13,.92));pointer-events:none}
 .founder .cap{position:absolute;left:22px;right:22px;bottom:22px;z-index:2}
 .founder .cap h4{font-size:22px;font-weight:700}
-.founder .cap span{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--teal)}
+.founder .cap span{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--silver)}
 .about h2{font-weight:700;font-size:clamp(28px,3.4vw,44px);line-height:1.06;margin-bottom:22px;max-width:18ch}
 .about .lead + .lead{margin-top:14px}
 .about .lead strong{color:var(--text);font-weight:600}
 .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.facts span{font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--teal-line);border-radius:999px;padding:7px 13px}
+.facts span{font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--silver-line);border-radius:999px;padding:7px 13px}
 
 /* FAQ */
 .faq{padding-block:var(--section)}
@@ -246,7 +246,7 @@ footer a:hover{color:var(--red-text)}
 @media (max-width:960px){
   .pilula,.nav-cta{display:none}
   .menu-btn{display:inline-flex}
-  .nav{background:rgba(14,13,13,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+  .nav{background:rgba(8,8,8,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
   .menu-mob{position:fixed;left:0;right:0;top:calc(72px + env(safe-area-inset-top,0px));z-index:49;display:flex;flex-direction:column;padding:12px max(20px,env(safe-area-inset-right,0px)) 24px max(20px,env(safe-area-inset-left,0px));background:var(--bg);border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .3s var(--ease),visibility 0s .3s}
   .menu-mob.open{opacity:1;transform:none;visibility:visible;transition:opacity .25s,transform .3s var(--ease)}
   .menu-mob a:not(.btn){padding:15px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--text);text-decoration:none}
@@ -279,6 +279,64 @@ footer a:hover{color:var(--red-text)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .rolar i,.play::after{animation:none}
+}
+
+/* ===== Tema Obsidian ===== */
+.label{gap:12px;color:var(--silver)}
+.label::before{width:2px;height:14px;border:0;background:var(--red)}
+.btn-red{background:transparent;border:1px solid var(--red);color:var(--text)}
+.btn-red svg{color:var(--red-text)}
+.btn-red:hover{background:var(--red);color:#fff;box-shadow:0 0 34px rgba(212,21,20,.45)}
+.btn-red:hover svg{color:#fff}
+.btn-solid{background:var(--red);border-color:var(--red);color:#fff}
+.btn-solid svg{color:#fff}
+.btn-ghost{border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--silver-line);background:rgba(205,203,202,.06)}
+
+/* Menu: links finos com traço vermelho */
+.nav-logo .lg{width:104px}
+.nav:not(.solida) .nav-logo{opacity:1!important;transform:none!important;pointer-events:auto!important}
+.pilula{background:none;border:0;backdrop-filter:none;-webkit-backdrop-filter:none;gap:6px;padding:0}
+.pilula a{font:500 13.5px var(--body);color:var(--muted);padding:12px 12px;border-radius:0}
+.pilula a.ativo{color:var(--text)}
+.pilula .ind{top:auto;bottom:4px;left:0;height:1px;border-radius:0;background:var(--red)}
+.nav-cta{min-height:42px;padding:0 18px;font-size:13.5px}
+
+/* Herói */
+.hero{padding-block:112px 40px}
+.hero .wrap{width:100%}
+.hero .wrap{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,56px);align-items:center}
+.hero .wrap > div{max-width:none}
+.pilares{list-style:none;margin:0 0 30px;padding:2px 0 2px 16px;border-left:2px solid var(--red);display:grid;gap:5px}
+.pilares li{font:400 11.5px/1.35 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hero h1{font-weight:800;font-size:clamp(40px,5.4vw,82px);line-height:.98;letter-spacing:-.045em;margin:0}
+.hero h1 .ln{display:block}
+.hero h1 .ln-red{color:var(--red);text-shadow:0 0 40px rgba(212,21,20,.35)}
+.sub{margin-top:26px;font:400 12px/1.7 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);max-width:44ch}
+.hero .lead{margin-top:16px;max-width:42ch}
+.hero-ctas{margin-top:30px}
+.orbe{position:relative;width:100%;max-width:580px;aspect-ratio:1/1;justify-self:end}
+.orbe .disco{position:absolute;inset:5%;border-radius:50%;background:radial-gradient(circle at 50% 58%,#1c0605 0%,#0d0b0b 46%,#080808 70%);box-shadow:inset 0 0 0 1px rgba(205,203,202,.05)}
+.orbe .aro{position:absolute;inset:5%;border-radius:50%;background:conic-gradient(from 150deg,transparent 0deg,rgba(212,21,20,.0) 30deg,rgba(242,57,47,.95) 95deg,rgba(212,21,20,.25) 150deg,transparent 190deg,transparent 360deg);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1.5px));mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1.5px));filter:drop-shadow(0 0 10px rgba(212,21,20,.8))}
+.orbe .brilho-r{position:absolute;inset:22%;border-radius:50%;background:radial-gradient(closest-side,rgba(212,21,20,.32),transparent);filter:blur(30px)}
+.orbe canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.trilho{display:flex;align-items:center;gap:18px;margin-top:48px;font:400 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.trilho i{width:1px;height:12px;background:var(--line-strong)}
+
+.tile,.combo,.passo{border-radius:16px}
+.final .lg{width:clamp(200px,28vw,340px)}
+footer .lg{width:96px}
+
+@media (max-width:960px){
+  .hero{padding-block:104px 64px}
+  .hero .wrap{grid-template-columns:1fr}
+  .orbe{justify-self:center;max-width:420px;margin-top:8px}
+  .hero h1{font-size:clamp(38px,11vw,64px)}
+  .trilho{justify-content:flex-start}
+}
+@media (max-width:600px){
+  .pilares{margin-bottom:24px}
 }
 </style>
 </head>
@@ -319,18 +377,24 @@ footer a:hover{color:var(--red-text)}
   <section class="hero" id="topo">
     <div class="wrap">
       <div>
-        <span class="logo-slot anima-hero"><img class="lg" src="assets/logo.svg" alt="iMarcas" width="240" height="62"></span>
-        <span class="pill"><span class="dot"></span>Instagram de negócios locais · Rio Preto e região</span>
-        <h1 class="split">Marcas reais para negócios <em class="ser">locais.</em></h1>
+        <ul class="pilares" aria-label="O que entregamos"><li>Foto</li><li>Vídeo</li><li>Perfil</li><li>Conteúdo</li></ul>
+        <h1 class="split"><span class="ln">Marcas reais</span> <span class="ln ln-red">para negócios</span> <span class="ln">locais.</span></h1>
+        <p class="sub">Instagram de negócios locais · Rio Preto e região</p>
         <p class="lead">Seu cliente procura você no Instagram antes de te ligar. A gente organiza o seu perfil e mantém ele vivo, todo mês.</p>
         <div class="hero-ctas">
           <a class="btn btn-red" href="#contato" data-ir>Quero montar o meu
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn btn-ghost" href="#antes-depois" data-ir>Ver antes e depois</a>
         </div>
+        <div class="trilho" aria-hidden="true"><span>Fotografar</span><i></i><span>Gravar</span><i></i><span>Publicar</span></div>
+      </div>
+      <div class="orbe" aria-hidden="true">
+        <div class="disco"></div>
+        <div class="brilho-r"></div>
+        <canvas id="cena"></canvas>
+        <div class="aro"></div>
       </div>
     </div>
-    <div class="rolar">Role para ver <i></i></div>
   </section>
 
   <section class="problem">
@@ -446,9 +510,9 @@ footer a:hover{color:var(--red-text)}
       </div>
       <div class="pilha">
         <article class="passo" style="--i:0;--c:var(--red)"><span class="n">01</span><div><h3>Conversa</h3><p>Entendemos o que você vende, para quem, e o que o cliente precisa ver antes de chamar.</p></div></article>
-        <article class="passo" style="--i:1;--c:var(--coral)"><span class="n">02</span><div><h3>Produção</h3><p>Sessão de fotos e gravação do vídeo de apresentação no seu espaço.</p></div></article>
-        <article class="passo" style="--i:2;--c:var(--teal)"><span class="n">03</span><div><h3>Montagem</h3><p>Bio, destaques, fixados e identidade aplicados no perfil por inteiro.</p></div></article>
-        <article class="passo" style="--i:3;--c:var(--text)"><span class="n">04</span><div><h3>Operação</h3><p>Criativos e reels entrando todo mês, no ritmo do combo que você escolher.</p></div></article>
+        <article class="passo" style="--i:1;--c:var(--silver)"><span class="n">02</span><div><h3>Produção</h3><p>Sessão de fotos e gravação do vídeo de apresentação no seu espaço.</p></div></article>
+        <article class="passo" style="--i:2;--c:var(--red)"><span class="n">03</span><div><h3>Montagem</h3><p>Bio, destaques, fixados e identidade aplicados no perfil por inteiro.</p></div></article>
+        <article class="passo" style="--i:3;--c:var(--silver)"><span class="n">04</span><div><h3>Operação</h3><p>Criativos e reels entrando todo mês, no ritmo do combo que você escolher.</p></div></article>
       </div>
     </div>
   </section>
@@ -489,7 +553,7 @@ footer a:hover{color:var(--red-text)}
       <h2 class="split">Vamos montar o seu <em class="ser">perfil?</em></h2>
       <p class="lead sobe">Conte o que o seu negócio faz. Eu te mostro o que muda no perfil e qual combo faz sentido.</p>
       <div class="row sobe">
-        <a class="btn btn-red" href="https://wa.me/5517991452199?text=Oi%2C%20vim%20pelo%20site%20da%20iMarcas%20e%20quero%20saber%20dos%20combos." target="_blank" rel="noopener">Chamar no WhatsApp
+        <a class="btn btn-red btn-solid" href="https://wa.me/5517991452199?text=Oi%2C%20vim%20pelo%20site%20da%20iMarcas%20e%20quero%20saber%20dos%20combos." target="_blank" rel="noopener">Chamar no WhatsApp
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-ghost" href="#antes-depois" data-ir>Ver antes e depois</a>
       </div>
@@ -500,7 +564,7 @@ footer a:hover{color:var(--red-text)}
 
 <footer>
   <div class="wrap">
-    <div class="fbrand"><img src="assets/logo.svg" alt="iMarcas" width="1177" height="302"><span>Marcas reais para negócios locais.</span></div>
+    <div class="fbrand"><span class="logo-slot"><img src="assets/logo.svg" alt="iMarcas" width="96" height="25"></span><span>Marcas reais para negócios locais.</span></div>
     <div class="fcols">
       <a href="https://wa.me/5517991452199" target="_blank" rel="noopener">WhatsApp</a>
       <a href="https://www.instagram.com/luk.tar/" target="_blank" rel="noopener">Instagram</a>
@@ -509,6 +573,128 @@ footer a:hover{color:var(--red-text)}
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* Triângulo de play em vidro preto com núcleo vermelho e anel cromado */
+(function(){
+  var cv = document.getElementById('cena');
+  if (!cv || !window.THREE) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var r;
+  try { r = new THREE.WebGLRenderer({canvas:cv, antialias:true, alpha:true}); } catch(e){ return; }
+  r.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  r.outputEncoding = THREE.sRGBEncoding;
+  r.toneMapping = THREE.ACESFilmicToneMapping;
+  r.toneMappingExposure = 1.05;
+
+  var scene = new THREE.Scene();
+  var cam = new THREE.PerspectiveCamera(30, 1, .1, 100);
+  cam.position.set(0, 0, 12.5);
+
+  /* Ambiente para os reflexos: painéis vermelhos, uma faixa branca e uma prata */
+  var env = new THREE.Scene();
+  env.background = new THREE.Color(0x000000);
+  function painel(w, h, hex, k, x, y, z){
+    var m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({color:new THREE.Color(hex).multiplyScalar(k), side:THREE.DoubleSide}));
+    m.position.set(x, y, z); m.lookAt(0, 0, 0); env.add(m);
+  }
+  painel(7, 12, 0xd41514, 5, -8, -1, -3);
+  painel(5, 9, 0xd41514, 3.5, 7, -3, -6);
+  painel(12, 1.1, 0xffffff, 4, 0, 8, 2);
+  painel(1.2, 7, 0xcdcbca, 3, 8, 2, 5);
+  painel(3, 1, 0xf2392f, 4, -2, -7, 4);
+  var pm = new THREE.PMREMGenerator(r);
+  scene.environment = pm.fromScene(env, .02).texture;
+
+  function triangulo(R, rc){
+    var p = [0,1,2].map(function(i){ var a = i * Math.PI * 2 / 3; return new THREE.Vector2(Math.cos(a) * R, Math.sin(a) * R); });
+    var sh = new THREE.Shape();
+    for (var i = 0; i < 3; i++){
+      var c = p[i], ant = p[(i + 2) % 3], prox = p[(i + 1) % 3];
+      var a1 = c.clone().add(ant.clone().sub(c).normalize().multiplyScalar(rc));
+      var b1 = c.clone().add(prox.clone().sub(c).normalize().multiplyScalar(rc));
+      if (i === 0) sh.moveTo(a1.x, a1.y); else sh.lineTo(a1.x, a1.y);
+      sh.quadraticCurveTo(c.x, c.y, b1.x, b1.y);
+    }
+    return sh;
+  }
+  function prisma(R, rc, prof, bev){
+    var g = new THREE.ExtrudeGeometry(triangulo(R, rc), {depth:prof, bevelEnabled:true, bevelThickness:bev, bevelSize:bev * .8, bevelSegments:14, curveSegments:28});
+    g.translate(0, 0, -prof / 2);
+    return g;
+  }
+
+  var grupo = new THREE.Group();
+  grupo.position.x = .18;
+  scene.add(grupo);
+
+  var nucleo = new THREE.Mesh(prisma(.92, .32, .55, .14), new THREE.MeshStandardMaterial({color:0x120000, emissive:0xc40f0e, emissiveIntensity:.9, roughness:.35}));
+  grupo.add(nucleo);
+
+  var casca = new THREE.Mesh(prisma(1.7, .55, 1.25, .42), new THREE.MeshPhysicalMaterial({
+    color:0x0a0a0a, metalness:.15, roughness:.05, clearcoat:1, clearcoatRoughness:.03,
+    transparent:true, opacity:.9, envMapIntensity:2.3, reflectivity:1, sheen:0, side:THREE.FrontSide
+  }));
+  casca.renderOrder = 2;
+  grupo.add(casca);
+
+  var luz = new THREE.PointLight(0xff1a10, 4, 7, 2);
+  grupo.add(luz);
+  var chave = new THREE.DirectionalLight(0xffffff, .55); chave.position.set(-4, 5, 6); scene.add(chave);
+  var contra = new THREE.DirectionalLight(0xff2a1f, 2.8); contra.position.set(5, -2, -4); scene.add(contra);
+  var borda = new THREE.DirectionalLight(0xcdcbca, 1.2); borda.position.set(6, 4, 2); scene.add(borda);
+  /* Sombra suave no chão do disco */
+  var somb = new THREE.Mesh(new THREE.CircleGeometry(1.7, 48), new THREE.MeshBasicMaterial({color:0x000000, transparent:true, opacity:.3}));
+  somb.rotation.x = -Math.PI / 2; somb.position.y = -2.15; somb.scale.set(1.25, .5, 1); scene.add(somb);
+
+  var anel = new THREE.Mesh(new THREE.TorusGeometry(2.62, .05, 32, 260), new THREE.MeshStandardMaterial({color:0xe6e4e3, metalness:1, roughness:.14, envMapIntensity:1.5}));
+  anel.rotation.set(1.18, .28, 0);
+  scene.add(anel);
+  var anel2 = new THREE.Mesh(new THREE.TorusGeometry(2.95, .012, 12, 260), new THREE.MeshBasicMaterial({color:0xd41514, transparent:true, opacity:.55}));
+  anel2.rotation.set(1.26, -.2, 0);
+  scene.add(anel2);
+
+  function ajusta(){
+    var w = cv.clientWidth, h = cv.clientHeight;
+    if (!w || !h) return;
+    r.setSize(w, h, false);
+    cam.aspect = w / h; cam.updateProjectionMatrix();
+  }
+  ajusta();
+  if ('ResizeObserver' in window) new ResizeObserver(ajusta).observe(cv); else window.addEventListener('resize', ajusta);
+
+  var mx = 0, my = 0, tx = 0, ty = 0;
+  window.addEventListener('pointermove', function(e){
+    tx = (e.clientX / window.innerWidth - .5) * 2;
+    ty = (e.clientY / window.innerHeight - .5) * 2;
+  }, {passive:true});
+
+  var t0 = performance.now(), visivel = true, ativo = false;
+  function quadro(){
+    var t = (performance.now() - t0) / 1000;
+    var rol = Math.min(window.scrollY / Math.max(window.innerHeight, 1), 1.5);
+    var entra = reduce ? 1 : Math.min(t / 1.8, 1), e = 1 - Math.pow(1 - entra, 3);
+    mx += (tx - mx) * .05; my += (ty - my) * .05;
+    grupo.scale.setScalar(.7 + .3 * e);
+    grupo.rotation.y = -.42 + Math.sin(t * .45) * .55 + mx * .45 + rol * 1.8;
+    grupo.rotation.x = .32 + Math.sin(t * .6) * .12 + my * .25;
+    grupo.rotation.z = Math.sin(t * .3) * .05;
+    grupo.position.y = Math.sin(t * .9) * .1; somb.scale.x = 1.25 - grupo.position.y * .4;
+    nucleo.material.emissiveIntensity = .85 + Math.sin(t * 1.6) * .2;
+    anel.rotation.z = t * .18 + rol;
+    anel2.rotation.z = -t * .1;
+    r.render(scene, cam);
+  }
+  function loop(){ if (!visivel){ ativo = false; return; } quadro(); requestAnimationFrame(loop); }
+  if (reduce){ quadro(); return; }
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      visivel = es[0].isIntersecting;
+      if (visivel && !ativo){ ativo = true; requestAnimationFrame(loop); }
+    }).observe(cv);
+  } else { ativo = true; loop(); }
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
@@ -606,7 +792,7 @@ footer a:hover{color:var(--red-text)}
     var tri = svg.querySelector('.lg-tri');
     var letras = svg.querySelectorAll('path:not(.lg-tri)');
     var L = tri.getTotalLength ? tri.getTotalLength() : 600;
-    gsap.set(tri, {strokeDasharray:L, strokeDashoffset:L, stroke:'#C52F43', strokeWidth:6, fillOpacity:0});
+    gsap.set(tri, {strokeDasharray:L, strokeDashoffset:L, stroke:'#D41514', strokeWidth:6, fillOpacity:0});
     gsap.set(letras, {y:60, opacity:0});
     return gsap.timeline({paused:true, defaults:{ease:'power3.out'}})
       .to(tri, {strokeDashoffset:0, duration:1.1, ease:'power2.inOut'}, 0)
@@ -634,21 +820,17 @@ footer a:hover{color:var(--red-text)}
   });
 
   /* Triângulo do logo do header respira */
-  gsap.to('.nav-logo .lg-tri', {scale:.82, transformOrigin:'0% 50%', duration:.9, yoyo:true, repeat:-1, ease:'sine.inOut', repeatDelay:2.4});
 
   /* HERO: entrada */
-  var logoHero = tlLogo(document.querySelector('.anima-hero svg'));
   var heroPal = quebra(document.querySelector('.hero h1'));
   gsap.timeline({defaults:{ease:'power3.out'}})
-    .add(logoHero.play(), .1)
-    .from('.hero .pill', {opacity:0, y:14, duration:.7}, .7)
-    .from(heroPal, {yPercent:110, filter:'blur(12px)', opacity:0, stagger:.06, duration:1.1}, .85)
-    .from('.hero .lead', {opacity:0, y:14, duration:.9}, 1.3)
-    .from('.hero-ctas', {opacity:0, y:14, duration:.9}, 1.45)
-        .from('.rolar', {opacity:0, duration:.8}, 2);
-
-  /* HERO: o card do showreel inclina de leve e o topo esmaece com a rolagem */
-  gsap.to('.rolar', {opacity:0, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'+=120', scrub:true}});
+    .from('.pilares li', {opacity:0, x:-14, stagger:.08, duration:.7}, .1)
+    .from(heroPal, {yPercent:110, filter:'blur(12px)', opacity:0, stagger:.07, duration:1.1}, .3)
+    .from('.hero .sub, .hero .lead', {opacity:0, y:14, stagger:.1, duration:.9}, .9)
+    .from('.hero-ctas, .trilho', {opacity:0, y:14, stagger:.12, duration:.9}, 1.1)
+    .from('.orbe .disco', {opacity:0, scale:.85, duration:1.6}, .2)
+    .from('.orbe .aro', {opacity:0, rotate:-120, duration:2.2, ease:'power2.out'}, .4);
+  gsap.to('.orbe .aro', {rotate:360, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:1}});
 
   /* Títulos palavra por palavra, blocos sobem */
   document.querySelectorAll('section:not(.hero) .split').forEach(function(h){
