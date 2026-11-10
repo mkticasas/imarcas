@@ -13,4 +13,4 @@ Publicado em https://mkticasas.github.io/imarcas/ (repositório mkticasas/imarca
 ## Pendências no index.html
 - Showreel: substitua o botão de play por `<video src="assets/showreel.mp4" autoplay muted loop playsinline>`
 - Foto "Quem faz": assets/lucas.jpg (troque o arquivo para atualizar)
-- Prints da seção Projetos: salve em `assets/projetos/` com os nomes `vitrine.jpg`, `casinha.jpg` e `telas-led.jpg` (1600×1000, topo da página). Sem o arquivo, o card mostra a prévia desenhada. `crm.jpg` e `orcamento.jpg` são prints com dados fictícios.
+- Prints da seção Projetos: salve em `assets/projetos/` com os nomes `vitrine.jpg`, `casinha.jpg` e `telas-led.jpg` (1600×1000, topo da página). Sem o arquivo, o card mostra a prévia desenhada. `crm.jpg` é print com dados fictícios. `estudo-led.mp4` (+ `estudo-led.jpg` de capa) é a gravação da rolagem do estudo Hyundai.

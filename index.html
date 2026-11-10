@@ -186,6 +186,7 @@ section{border-top:1px solid var(--line)}
 .tela .barra span{margin-left:10px;font:400 10.5px var(--mono);color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tela img{position:absolute;inset:28px 0 0;width:100%;height:calc(100% - 28px);object-fit:cover;object-position:top;z-index:1;transition:transform 1.2s var(--ease)}
 .proj:hover .tela img{transform:scale(1.03)}
+.tela video{position:absolute;inset:28px 0 0;width:100%;height:calc(100% - 28px);object-fit:cover;object-position:top;z-index:1;background:#0b0b0b}
 /* Prévia desenhada (aparece enquanto não houver print em assets/projetos/) */
 .mock{position:absolute;inset:28px 0 0;padding:16px;display:grid;gap:10px;align-content:start;background:radial-gradient(120% 80% at 85% 0%,color-mix(in srgb,var(--a) 22%,transparent),transparent 60%),#0b0b0b}
 .mock b{display:block;border-radius:5px;background:rgba(237,235,234,.08)}
@@ -526,7 +527,7 @@ footer .lg{width:96px}
           <span class="label">Projetos</span>
           <h2 class="h2 split">Sites que já estão <em class="ser">no ar.</em></h2>
         </div>
-        <p class="lead sobe" style="max-width:40ch">Além do perfil, montamos o site que o seu cliente abre e o sistema que a sua equipe usa: vitrine, landing page, portfólio, CRM e orçamento.</p>
+        <p class="lead sobe" style="max-width:40ch">Além do perfil, montamos o site que o seu cliente abre e o sistema que a sua equipe usa: vitrine, landing page, portfólio, CRM e apresentações.</p>
       </div>
       <div class="grid-proj">
         <a class="proj cai" href="https://vitrine.icasasconstrutora.com.br/" target="_blank" rel="noopener" style="--a:#3BBFAD">
@@ -582,18 +583,18 @@ footer .lg{width:96px}
         </article>
         <article class="proj proj-print cai">
           <div class="tela">
-            <div class="barra"><i></i><i></i><i></i><span>Orçamento · prévia</span></div>
-            <img src="assets/projetos/orcamento.jpg" alt="Prévia de uma apresentação de orçamento de som ambiente" loading="lazy" width="1600" height="1000">
+            <div class="barra"><i></i><i></i><i></i><span>Estudo de LED · iCasas × Hyundai</span></div>
+            <video class="rola" src="assets/projetos/estudo-led.mp4" poster="assets/projetos/estudo-led.jpg" muted loop playsinline preload="metadata" aria-label="Vídeo rolando o site do estudo de painel de LED para a Hyundai"></video>
           </div>
           <div class="proj-txt">
-            <span class="proj-tipo">Sistema sob medida · Orçamento</span>
-            <h3>Orçamento que se apresenta</h3>
-            <p>No lugar do PDF frio, uma página com a cara da empresa: o cliente vê cada item, o total e as formas de pagamento.</p>
-            <span class="proj-selo">Prévia com dados fictícios</span>
+            <span class="proj-tipo">Apresentação para cliente · Estudo</span>
+            <h3>Estudo de painel de LED</h3>
+            <p>No lugar do PDF, um site animado: o cliente rola e entende quantas pessoas passam na frente da loja, ponto a ponto.</p>
+            <span class="proj-selo">Gravação da rolagem</span>
           </div>
         </article>
       </div>
-      <p class="proj-nota sobe">CRM e orçamento aparecem com dados fictícios: a versão de cada cliente fica protegida.</p>
+      <p class="proj-nota sobe">O CRM aparece com dados fictícios: a versão de cada cliente fica protegida.</p>
     </div>
   </section>
 
@@ -1000,6 +1001,18 @@ footer .lg{width:96px}
 
   window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); });
+})();
+</script>
+<script>
+/* Vídeos dos projetos: tocam só quando aparecem na tela */
+(function(){
+  var vs = document.querySelectorAll('video.rola');
+  if (!vs.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)){ vs.forEach(function(v){ v.play().catch(function(){}); }); return; }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting) e.target.play().catch(function(){}); else e.target.pause(); });
+  }, {threshold:.35});
+  vs.forEach(function(v){ io.observe(v); });
 })();
 </script>
 </body>
