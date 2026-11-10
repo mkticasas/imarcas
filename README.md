@@ -13,4 +13,4 @@ Publicado em https://mkticasas.github.io/imarcas/ (repositório mkticasas/imarca
 ## Pendências no index.html
 - Showreel: substitua o botão de play por `<video src="assets/showreel.mp4" autoplay muted loop playsinline>`
 - Foto "Quem faz": assets/lucas.jpg (troque o arquivo para atualizar)
-- Prints da seção Projetos: salve em `assets/projetos/` com os nomes `vitrine.jpg`, `ditinho.jpg`, `casinha.jpg` e `telas-led.jpg` (1600×1000, topo da página). Sem o arquivo, o card mostra a prévia desenhada.
+- Prints da seção Projetos: salve em `assets/projetos/` com os nomes `vitrine.jpg`, `ditinho.jpg`, `casinha.jpg` e `telas-led.jpg` (1600×1000, topo da página). Sem o arquivo, o card mostra a prévia desenhada. `crm.jpg` e `orcamento.jpg` são prints com dados fictícios.

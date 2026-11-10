@@ -210,6 +210,10 @@ section{border-top:1px solid var(--line)}
 .proj-ver{margin-top:auto;padding-top:14px;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--text)}
 .proj-ver svg{color:var(--red-text);transition:transform .2s var(--ease)}
 .proj:hover .proj-ver svg{transform:translate(2px,-2px)}
+.proj-print{cursor:default}
+.proj-print:hover{transform:none;border-color:var(--line)}
+.proj-print:hover .tela img{transform:none}
+.proj-selo{align-self:flex-start;margin-top:auto;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line-strong);border-radius:999px;padding:5px 11px}
 .proj-nota{color:var(--dim);font-size:13.5px;margin-top:26px}
 
 /* COMBOS */
@@ -517,7 +521,7 @@ footer .lg{width:96px}
           <span class="label">Projetos</span>
           <h2 class="h2 split">Sites que já estão <em class="ser">no ar.</em></h2>
         </div>
-        <p class="lead sobe" style="max-width:40ch">Além do perfil, montamos o site que o seu cliente abre: vitrine, cardápio, orçamento e portfólio. Clique para ver funcionando.</p>
+        <p class="lead sobe" style="max-width:40ch">Além do perfil, montamos o site que o seu cliente abre e o sistema que a sua equipe usa: vitrine, cardápio, CRM e orçamento.</p>
       </div>
       <div class="grid-proj">
         <a class="proj cai" href="https://vitrine.icasasconstrutora.com.br/" target="_blank" rel="noopener" style="--a:#3BBFAD">
@@ -572,8 +576,32 @@ footer .lg{width:96px}
             <span class="proj-ver">Ver portfólio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
           </div>
         </a>
+        <article class="proj proj-print cai">
+          <div class="tela">
+            <div class="barra"><i></i><i></i><i></i><span>CRM de vendas · prévia</span></div>
+            <img src="assets/projetos/crm.jpg" alt="Prévia de um CRM de vendas com funil por etapas, indicadores e corretores" loading="lazy" width="1600" height="1000">
+          </div>
+          <div class="proj-txt">
+            <span class="proj-tipo">Sistema sob medida · CRM</span>
+            <h3>CRM de vendas</h3>
+            <p>Funil por etapas, leads de Instagram, anúncio e site em um lugar só, distribuídos entre os vendedores.</p>
+            <span class="proj-selo">Prévia com dados fictícios</span>
+          </div>
+        </article>
+        <article class="proj proj-print cai">
+          <div class="tela">
+            <div class="barra"><i></i><i></i><i></i><span>Orçamento · prévia</span></div>
+            <img src="assets/projetos/orcamento.jpg" alt="Prévia de uma apresentação de orçamento de som ambiente" loading="lazy" width="1600" height="1000">
+          </div>
+          <div class="proj-txt">
+            <span class="proj-tipo">Sistema sob medida · Orçamento</span>
+            <h3>Orçamento que se apresenta</h3>
+            <p>No lugar do PDF frio, uma página com a cara da empresa: o cliente vê cada item, o total e as formas de pagamento.</p>
+            <span class="proj-selo">Prévia com dados fictícios</span>
+          </div>
+        </article>
       </div>
-      <p class="proj-nota sobe">Sistemas internos, como CRM e painéis de gestão, ficam de fora por proteger os dados de cada cliente. Mostramos em reunião.</p>
+      <p class="proj-nota sobe">CRM e orçamento aparecem com dados fictícios: a versão de cada cliente fica protegida.</p>
     </div>
   </section>
 
