@@ -175,7 +175,9 @@ section{border-top:1px solid var(--line)}
 
 /* PROJETOS: sites que os clientes dos nossos clientes usam */
 .projetos{padding-block:var(--section)}
-.grid-proj{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.grid-proj{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.grid-proj > .proj{grid-column:span 2}
+.grid-proj > .proj-print{grid-column:span 3}
 .proj{display:flex;flex-direction:column;border-radius:18px;background:var(--card);border:1px solid var(--line);overflow:hidden;text-decoration:none;color:var(--text);min-width:0;transition:border-color .25s,transform .35s var(--ease)}
 .proj:hover{border-color:var(--red-line);transform:translateY(-3px)}
 .tela{position:relative;aspect-ratio:16/10;background:#0b0b0b;border-bottom:1px solid var(--line);overflow:hidden}
@@ -203,7 +205,7 @@ section{border-top:1px solid var(--line)}
 .mock .frm{margin-top:6px;display:grid;grid-template-columns:1fr 1fr;gap:7px}
 .mock .frm b{height:24px}
 .mock .frm b:last-child{grid-column:1/-1;background:var(--a);opacity:.8}
-.proj-txt{padding:24px 26px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.proj-txt{padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
 .proj-tipo{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--silver)}
 .proj h3{font-weight:700;font-size:clamp(19px,1.8vw,24px)}
 .proj p{color:var(--muted);font-size:14.5px}
@@ -307,11 +309,14 @@ footer a:hover{color:var(--red-text)}
   .big > div + div{border-top:1px solid var(--line)}
   .big .num{font-size:clamp(84px,26vw,120px)}
   .grid-cases{grid-template-columns:1fr;gap:72px}
-  .grid-proj{grid-template-columns:1fr}
+  .grid-proj{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-proj > .proj,.grid-proj > .proj-print{grid-column:span 1}
+  .grid-proj > :last-child{grid-column:1 / -1}
   .founder{max-width:420px}
 }
 @media (max-width:600px){
   .grid-services{grid-template-columns:1fr}
+  .grid-proj{grid-template-columns:1fr}
   .tile{padding:24px}
   .tile-feature{padding:28px}
   .hero-ctas .btn,.final .row .btn{flex:1 1 100%}
@@ -521,7 +526,7 @@ footer .lg{width:96px}
           <span class="label">Projetos</span>
           <h2 class="h2 split">Sites que já estão <em class="ser">no ar.</em></h2>
         </div>
-        <p class="lead sobe" style="max-width:40ch">Além do perfil, montamos o site que o seu cliente abre e o sistema que a sua equipe usa: vitrine, cardápio, CRM e orçamento.</p>
+        <p class="lead sobe" style="max-width:40ch">Além do perfil, montamos o site que o seu cliente abre e o sistema que a sua equipe usa: vitrine, landing page, portfólio, CRM e orçamento.</p>
       </div>
       <div class="grid-proj">
         <a class="proj cai" href="https://vitrine.icasasconstrutora.com.br/" target="_blank" rel="noopener" style="--a:#3BBFAD">
@@ -535,19 +540,6 @@ footer .lg{width:96px}
             <h3>Vitrine dos Sonhos</h3>
             <p>As casas entregues pela iCasas Construtora em fotos e vídeos, obra por obra, com modo para TV na loja.</p>
             <span class="proj-ver">Ver site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-          </div>
-        </a>
-        <a class="proj cai" href="https://rukasut.github.io/cardapio-ditinho/" target="_blank" rel="noopener" style="--a:#F2A93B">
-          <div class="tela">
-            <div class="barra"><i></i><i></i><i></i><span>cardápio · Pastelaria do Ditinho</span></div>
-            <div class="mock" aria-hidden="true"><b class="t1"></b><b class="t3"></b><div class="lst"><b></b><b></b><b></b><b></b></div></div>
-            <img src="assets/projetos/ditinho.jpg" alt="Cardápio digital da Pastelaria do Ditinho" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="proj-txt">
-            <span class="proj-tipo">Alimentação · Cardápio digital</span>
-            <h3>Pastelaria do Ditinho</h3>
-            <p>Cardápio no celular: o cliente monta o pedido, paga no Pix e o pedido chega pronto no WhatsApp.</p>
-            <span class="proj-ver">Ver cardápio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
           </div>
         </a>
         <a class="proj cai" href="https://mkticasas.github.io/casinha-do-dignidade/" target="_blank" rel="noopener" style="--a:#E0567A">
