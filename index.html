@@ -173,6 +173,45 @@ section{border-top:1px solid var(--line)}
 .compare input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
 .compare input:focus-visible ~ .knob{outline:3px solid #fff;outline-offset:3px}
 
+/* PROJETOS: sites que os clientes dos nossos clientes usam */
+.projetos{padding-block:var(--section)}
+.grid-proj{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.proj{display:flex;flex-direction:column;border-radius:18px;background:var(--card);border:1px solid var(--line);overflow:hidden;text-decoration:none;color:var(--text);min-width:0;transition:border-color .25s,transform .35s var(--ease)}
+.proj:hover{border-color:var(--red-line);transform:translateY(-3px)}
+.tela{position:relative;aspect-ratio:16/10;background:#0b0b0b;border-bottom:1px solid var(--line);overflow:hidden}
+.tela .barra{position:absolute;left:0;right:0;top:0;height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#121212;border-bottom:1px solid var(--line);z-index:2}
+.tela .barra i{width:8px;height:8px;border-radius:50%;background:#2a2828}
+.tela .barra span{margin-left:10px;font:400 10.5px var(--mono);color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tela img{position:absolute;inset:28px 0 0;width:100%;height:calc(100% - 28px);object-fit:cover;object-position:top;z-index:1;transition:transform 1.2s var(--ease)}
+.proj:hover .tela img{transform:scale(1.03)}
+/* Prévia desenhada (aparece enquanto não houver print em assets/projetos/) */
+.mock{position:absolute;inset:28px 0 0;padding:16px;display:grid;gap:10px;align-content:start;background:radial-gradient(120% 80% at 85% 0%,color-mix(in srgb,var(--a) 22%,transparent),transparent 60%),#0b0b0b}
+.mock b{display:block;border-radius:5px;background:rgba(237,235,234,.08)}
+.mock .t1{height:12px;width:46%;background:var(--a);opacity:.85}
+.mock .t2{height:7px;width:68%}
+.mock .t3{height:7px;width:38%}
+.mock .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:6px}
+.mock .gal b{aspect-ratio:4/3;background:linear-gradient(150deg,color-mix(in srgb,var(--a) 28%,#1a1a1a),#141414)}
+.mock .lst{display:grid;gap:7px;margin-top:6px}
+.mock .lst b{height:22px;display:flex;justify-content:flex-end;align-items:center;padding-right:8px}
+.mock .lst b::after{content:"";width:26px;height:9px;border-radius:99px;background:var(--a);opacity:.8}
+.mock .vid{margin-top:6px;display:grid;grid-template-columns:2fr 1fr;gap:7px}
+.mock .vid b{aspect-ratio:16/9;position:relative;background:linear-gradient(150deg,#1d1d1d,#121212)}
+.mock .vid b:first-child::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-40%,-50%);border-left:12px solid var(--a);border-top:7px solid transparent;border-bottom:7px solid transparent}
+.mock .vid span{display:grid;gap:7px}
+.mock .vid span b{aspect-ratio:auto;height:100%}
+.mock .frm{margin-top:6px;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.mock .frm b{height:24px}
+.mock .frm b:last-child{grid-column:1/-1;background:var(--a);opacity:.8}
+.proj-txt{padding:24px 26px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.proj-tipo{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--silver)}
+.proj h3{font-weight:700;font-size:clamp(19px,1.8vw,24px)}
+.proj p{color:var(--muted);font-size:14.5px}
+.proj-ver{margin-top:auto;padding-top:14px;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--text)}
+.proj-ver svg{color:var(--red-text);transition:transform .2s var(--ease)}
+.proj:hover .proj-ver svg{transform:translate(2px,-2px)}
+.proj-nota{color:var(--dim);font-size:13.5px;margin-top:26px}
+
 /* COMBOS */
 .combos{padding-block:var(--section);background:linear-gradient(180deg,transparent,rgba(59,191,173,.04),transparent)}
 .grid-combos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -264,6 +303,7 @@ footer a:hover{color:var(--red-text)}
   .big > div + div{border-top:1px solid var(--line)}
   .big .num{font-size:clamp(84px,26vw,120px)}
   .grid-cases{grid-template-columns:1fr;gap:72px}
+  .grid-proj{grid-template-columns:1fr}
   .founder{max-width:420px}
 }
 @media (max-width:600px){
@@ -358,6 +398,7 @@ footer .lg{width:96px}
       <span class="ind"></span>
       <a href="#fazemos" data-ir>O que fazemos</a>
       <a href="#antes-depois" data-ir>Antes e depois</a>
+      <a href="#projetos" data-ir>Projetos</a>
       <a href="#combos" data-ir>Combos</a>
       <a href="#como" data-ir>Como funciona</a>
     </nav>
@@ -368,6 +409,7 @@ footer .lg{width:96px}
 <nav class="menu-mob" id="menu-mob" aria-label="Menu">
   <a href="#fazemos" data-ir>O que fazemos</a>
   <a href="#antes-depois" data-ir>Antes e depois</a>
+  <a href="#projetos" data-ir>Projetos</a>
   <a href="#combos" data-ir>Combos</a>
   <a href="#como" data-ir>Como funciona</a>
   <a class="btn btn-red" href="https://wa.me/5517991452199?text=Oi%2C%20vim%20pelo%20site%20da%20iMarcas%20e%20quero%20saber%20dos%20combos." target="_blank" rel="noopener">Falar no WhatsApp</a>
@@ -465,6 +507,73 @@ footer .lg{width:96px}
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="projetos" id="projetos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="label">Projetos</span>
+          <h2 class="h2 split">Sites que já estão <em class="ser">no ar.</em></h2>
+        </div>
+        <p class="lead sobe" style="max-width:40ch">Além do perfil, montamos o site que o seu cliente abre: vitrine, cardápio, orçamento e portfólio. Clique para ver funcionando.</p>
+      </div>
+      <div class="grid-proj">
+        <a class="proj cai" href="https://vitrine.icasasconstrutora.com.br/" target="_blank" rel="noopener" style="--a:#3BBFAD">
+          <div class="tela">
+            <div class="barra"><i></i><i></i><i></i><span>vitrine.icasasconstrutora.com.br</span></div>
+            <div class="mock" aria-hidden="true"><b class="t1"></b><b class="t2"></b><div class="gal"><b></b><b></b><b></b><b></b><b></b><b></b></div></div>
+            <img src="assets/projetos/vitrine.jpg" alt="Página inicial da Vitrine dos Sonhos" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="proj-txt">
+            <span class="proj-tipo">Construtora · Portfólio</span>
+            <h3>Vitrine dos Sonhos</h3>
+            <p>As casas entregues pela iCasas Construtora em fotos e vídeos, obra por obra, com modo para TV na loja.</p>
+            <span class="proj-ver">Ver site <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+        <a class="proj cai" href="https://rukasut.github.io/cardapio-ditinho/" target="_blank" rel="noopener" style="--a:#F2A93B">
+          <div class="tela">
+            <div class="barra"><i></i><i></i><i></i><span>cardápio · Pastelaria do Ditinho</span></div>
+            <div class="mock" aria-hidden="true"><b class="t1"></b><b class="t3"></b><div class="lst"><b></b><b></b><b></b><b></b></div></div>
+            <img src="assets/projetos/ditinho.jpg" alt="Cardápio digital da Pastelaria do Ditinho" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="proj-txt">
+            <span class="proj-tipo">Alimentação · Cardápio digital</span>
+            <h3>Pastelaria do Ditinho</h3>
+            <p>Cardápio no celular: o cliente monta o pedido, paga no Pix e o pedido chega pronto no WhatsApp.</p>
+            <span class="proj-ver">Ver cardápio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+        <a class="proj cai" href="https://mkticasas.github.io/casinha-do-dignidade/" target="_blank" rel="noopener" style="--a:#E0567A">
+          <div class="tela">
+            <div class="barra"><i></i><i></i><i></i><span>Casinha do Dignidade</span></div>
+            <div class="mock" aria-hidden="true"><b class="t1"></b><b class="t2"></b><b class="t3"></b><div class="frm"><b></b><b></b><b></b><b></b><b></b></div></div>
+            <img src="assets/projetos/casinha.jpg" alt="Página da Casinha do Dignidade" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="proj-txt">
+            <span class="proj-tipo">Eventos · Página com orçamento</span>
+            <h3>Casinha do Dignidade</h3>
+            <p>Casa de festa para alugar. O cliente escolhe data e pacote, vê o valor na hora e envia o pedido pelo WhatsApp.</p>
+            <span class="proj-ver">Ver página <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+        <a class="proj cai" href="https://mkticasas.github.io/telas-led/" target="_blank" rel="noopener" style="--a:#5B8DEF">
+          <div class="tela">
+            <div class="barra"><i></i><i></i><i></i><span>Telas de LED · iCasas Automação</span></div>
+            <div class="mock" aria-hidden="true"><b class="t1"></b><b class="t3"></b><div class="vid"><b></b><span><b></b><b></b></span></div></div>
+            <img src="assets/projetos/telas-led.jpg" alt="Portfólio de telas de LED da iCasas Automação" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="proj-txt">
+            <span class="proj-tipo">Automação · Portfólio em vídeo</span>
+            <h3>Telas de LED iCasas</h3>
+            <p>Instalações de painéis de LED externos em vídeo, com o som de cada projeto e orçamento direto no WhatsApp.</p>
+            <span class="proj-ver">Ver portfólio <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </div>
+        </a>
+      </div>
+      <p class="proj-nota sobe">Sistemas internos, como CRM e painéis de gestão, ficam de fora por proteger os dados de cada cliente. Mostramos em reunião.</p>
     </div>
   </section>
 
@@ -813,7 +922,7 @@ footer .lg{width:96px}
     ind.style.opacity = 1; ind.style.width = a.offsetWidth + 'px';
     ind.style.transform = 'translateX(' + (a.offsetLeft - 4) + 'px)';
   }
-  ['topo','fazemos','antes-depois','combos','como','sobre','contato'].forEach(function(id){
+  ['topo','fazemos','antes-depois','projetos','combos','como','sobre','contato'].forEach(function(id){
     ScrollTrigger.create({trigger:'#' + id, start:'top 50%', end:'bottom 50%',
       onToggle:function(st){ if (st.isActive) ativa(id); }});
   });
@@ -841,7 +950,7 @@ footer .lg{width:96px}
   gsap.utils.toArray('.sobe').forEach(function(el){
     gsap.from(el, {y:44, opacity:0, filter:'blur(6px)', duration:1, ease:'power3.out', scrollTrigger:{trigger:el, start:'top 90%'}});
   });
-  ['.grid-services','.grid-combos'].forEach(function(g){
+  ['.grid-services','.grid-proj','.grid-combos'].forEach(function(g){
     gsap.from(document.querySelectorAll(g + ' .cai'), {y:70, opacity:0, rotateX:-8, transformPerspective:1000, stagger:.1, duration:1, ease:'power3.out',
       scrollTrigger:{trigger:g, start:'top 82%'}});
   });
